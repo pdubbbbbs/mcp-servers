@@ -1,0 +1,35 @@
+{
+  "name": "puppeteer-mcp-server",
+  "version": "1.0.0",
+  "description": "Puppeteer MCP Server for Warp AI Terminal - Web scraping, screenshots, PDF generation, and browser automation",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "tsc",
+    "deploy": "wrangler publish",
+    "test": "jest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "hono": "^3.0.0",
+    "@cloudflare/puppeteer": "^0.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "puppeteer",
+    "web-scraping",
+    "browser-automation",
+    "cloudflare-workers",
+    "warp",
+    "ai-terminal"
+  ],
+  "author": "Philip S Wright <github@philipwright.me>",
+  "license": "MIT"
+}

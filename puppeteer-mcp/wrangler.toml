@@ -1,0 +1,16 @@
+name = "puppeteer-mcp-server"
+main = "dist/index.js"
+compatibility_date = "2023-08-30"
+
+# Browser support for Puppeteer
+browser = { binding = "BROWSER" }
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.development]
+vars = { ENVIRONMENT = "development" }
+
+# Environment variables
+# Set these using: wrangler secret put <NAME>
+# No secrets required for basic functionality

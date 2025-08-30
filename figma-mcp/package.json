@@ -1,0 +1,22 @@
+{
+  "name": "figma-mcp-server",
+  "version": "1.0.0",
+  "description": "Figma MCP Server for Warp AI Terminal - Design file operations, component management, and team collaboration",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "tsc",
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "hono": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  },
+  "keywords": ["mcp", "figma", "design", "cloudflare-workers", "warp"],
+  "author": "Philip S Wright <github@philipwright.me>",
+  "license": "MIT"
+}
