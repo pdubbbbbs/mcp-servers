@@ -5,14 +5,37 @@ import { PuppeteerClient } from './puppeteer';
 import {
   MCPRequest,
   MCPResponse,
-  MCPError,
   MCPTool,
-  ScrapeRequest,
   ScreenshotRequest,
   PDFRequest,
-  ElementScreenshotRequest,
-  FormSubmissionRequest,
 } from './types';
+
+// Additional interfaces for the server
+interface ElementScreenshotRequest {
+  url: string;
+  selector: string;
+  options?: {
+    format?: 'png' | 'jpeg';
+    quality?: number;
+  };
+}
+
+interface ScrapeRequest {
+  url: string;
+  selectors: Record<string, string>;
+  waitOptions?: {
+    timeout?: number;
+    waitUntil?: 'load' | 'domcontentloaded' | 'networkidle0' | 'networkidle2';
+  };
+}
+
+interface FormSubmissionRequest {
+  url: string;
+  formData: {
+    selector: string;
+    fields: Record<string, string>;
+  };
+}
 
 const app = new Hono();
 
@@ -240,7 +263,7 @@ function createSuccessResponse(id: string | number, result: any): MCPResponse {
 // Main MCP endpoint
 app.post('/mcp', async (c) => {
   try {
-    const env = c.env as Env;
+    const env = c.env as unknown as Env;
     const browser = env.BROWSER;
 
     if (!browser) {

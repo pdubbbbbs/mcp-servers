@@ -1,6 +1,7 @@
 name = "puppeteer-mcp-server"
 main = "dist/index.js"
 compatibility_date = "2023-08-30"
+compatibility_flags = ["nodejs_compat"]
 
 # Browser support for Puppeteer
 browser = { binding = "BROWSER" }

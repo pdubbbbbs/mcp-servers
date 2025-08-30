@@ -113,7 +113,11 @@ export class GitHubClient {
   }
 
   async closeIssue(owner: string, repo: string, issueNumber: number): Promise<GitHubIssue> {
-    return this.updateIssue(owner, repo, issueNumber, { state: 'closed' as any });
+    return this.request<GitHubIssue>(`/repos/${owner}/${repo}/issues/${issueNumber}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ state: 'closed' }),
+    });
   }
 
   // Pull Request operations

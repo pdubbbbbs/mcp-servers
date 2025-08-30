@@ -1,16 +1,13 @@
-import puppeteer from '@cloudflare/puppeteer';
 import {
-  ScreenshotOptions,
-  PDFOptions,
-  ScrapeRequest,
   ScreenshotRequest,
   PDFRequest,
+  WaitOptions,
+  ScrapeRequest,
   ElementScreenshotRequest,
   FormSubmissionRequest,
+  ScrapingResult,
   LinkData,
   ImageData,
-  ScrapingResult,
-  WaitOptions,
 } from './types';
 
 export class PuppeteerClient {
