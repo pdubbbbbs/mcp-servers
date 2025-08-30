@@ -1,0 +1,17 @@
+name = "github-mcp-server"
+main = "dist/index.js"
+compatibility_date = "2023-08-30"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.development]
+vars = { ENVIRONMENT = "development" }
+
+# Environment variables for GitHub API
+# Set these using: wrangler secret put GITHUB_TOKEN
+# vars = { }
+
+# Example secrets (set via CLI):
+# GITHUB_TOKEN - GitHub Personal Access Token
+# WEBHOOK_SECRET - Optional webhook secret for security

@@ -1,0 +1,32 @@
+{
+  "name": "github-mcp-server",
+  "version": "1.0.0",
+  "description": "GitHub MCP Server for Warp AI Terminal - Repository management, issues, PRs, and more",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "tsc",
+    "deploy": "wrangler publish",
+    "test": "jest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "hono": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "github",
+    "cloudflare-workers",
+    "warp",
+    "ai-terminal"
+  ],
+  "author": "Philip S Wright <github@philipwright.me>",
+  "license": "MIT"
+}
