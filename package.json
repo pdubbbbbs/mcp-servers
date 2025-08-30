@@ -1,0 +1,49 @@
+{
+  "name": "mcp-servers-collection",
+  "version": "1.0.0",
+  "description": "A complete collection of Model Context Protocol servers for Warp AI terminal, deployable on Cloudflare Workers",
+  "author": "Philip S Wright <github@philipwright.me>",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "warp",
+    "ai-terminal",
+    "cloudflare-workers",
+    "github",
+    "puppeteer",
+    "figma",
+    "sentry",
+    "contact7"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pdubbbbbs/mcp-servers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pdubbbbbs/mcp-servers/issues"
+  },
+  "homepage": "https://github.com/pdubbbbbs/mcp-servers#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev": "npm run dev --workspaces",
+    "deploy": "./deploy/deploy-all.sh",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "type-check": "npm run type-check --workspaces"
+  },
+  "workspaces": [
+    "github-mcp",
+    "puppeteer-mcp",
+    "figma-mcp",
+    "sentry-mcp",
+    "contact7-mcp"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
